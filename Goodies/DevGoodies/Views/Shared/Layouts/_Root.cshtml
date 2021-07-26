@@ -1,0 +1,33 @@
+﻿@using DevGoodies.Interfaces
+@using DevGoodies.Models.Pages
+@using DevGoodies.Business.ExtensionMethods
+
+@model IPageViewModel<BasePage>
+
+<!DOCTYPE html>
+<html lang="@Model.CurrentPage.Language">
+<head>
+  <title>@(Model.CurrentPage.MetaTitle ?? Model.CurrentPage.Name)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="@Model.CurrentPage.MetaKeywords" />
+  <meta name="description" content="@Model.CurrentPage.MetaDescription" />
+  @*Render og types here @Model.CurrentPage.OgTypes --> Strings, separated by ","*@
+  @Html.CanonicalLink()
+  @Html.AlternateLinks()
+  @*Render stylesheets and js here*@
+</head>
+<body>
+  @Html.RenderEPiServerQuickNavigator() @* Render EPiServer menu for Editors *@
+
+  @if (User.Identity.IsAuthenticated)
+  {
+    <a href="/en/logout">Log out @User.Identity.Name</a>
+  }
+  else
+  {
+    <a href="@FormsAuthentication.LoginUrl?ReturnUrl=@Model.CurrentPage.PageLink.ExternalURLFromReference()">Log in</a>
+  }
+
+  @RenderBody()
+</body>
+</html>

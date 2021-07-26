@@ -1,0 +1,12 @@
+﻿@using DevGoodies.ViewModels
+@using EPiServer.Web.Mvc.Html
+
+@model PageViewModel<DevGoodies.Models.Pages.StartPage>
+
+<h1 @Html.EditAttributes(x => x.CurrentPage.Heading)>
+  @(Model.CurrentPage.Heading ?? Model.CurrentPage.Name)
+</h1>
+
+<div>
+  @Html.PropertyFor(x => x.CurrentPage.MainBody) @* Use for On-Page Editing *@
+</div>

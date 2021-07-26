@@ -216,20 +216,34 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\Attributes\OGTypeSelectionAttribute.cs" />
+    <Compile Include="Business\DependencyResolvers\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\ExtensionMethods\MiscExtensions.cs" />
+    <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
+    <Compile Include="Initialization\RegisterAdminInitializationModule.cs" />
+    <Compile Include="Business\SelectionFactories\OGTypeSelectionFactory.cs" />
+    <Compile Include="Business\Constants\Groups.cs" />
+    <Compile Include="Business\Constants\Tabs.cs" />
+    <Compile Include="Controllers\StartPageController.cs" />
+    <Compile Include="Controllers\BasePageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Initialization\RegisterDependencyResolverInitializationModule.cs" />
+    <Compile Include="Models\Pages\StartPage.cs" />
+    <Compile Include="Models\Pages\BasePage.cs" />
+    <Compile Include="Interfaces\IPageViewModel.cs" />
+    <Compile Include="ViewModels\PageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Business\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Business\Enums\" />
+    <Folder Include="ClientResources\" />
+    <Folder Include="Data\" />
     <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
-    <Folder Include="Models\Pages\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Static\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -243,6 +257,9 @@
     <Content Include="modules\_protected\EPiServer.Cms.TinyMce\web.config" />
     <Content Include="modules\_protected\EPiServer.Cms.TinyMce\EPiServer.Cms.TinyMce.zip" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\Layouts\_Root.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\StartPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
