@@ -274,6 +274,7 @@
     <Content Include="Views\BackEndPage\Index.cshtml" />
     <Content Include="Views\FrontEndPage\Index.cshtml" />
     <Content Include="Views\ResourcesPage\Index.cshtml" />
+    <Content Include="Views\Shared\_MainMenu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

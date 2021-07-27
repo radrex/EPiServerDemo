@@ -34,8 +34,7 @@
             }
 
             string enabledString = ConfigurationManager.AppSettings["dev:SeedPages"];
-            bool enabled;
-            if (bool.TryParse(enabledString, out enabled))
+            if (bool.TryParse(enabledString, out bool enabled))
             {
                 if (enabled)
                 {
@@ -91,7 +90,7 @@
                         repo.Save(resources, SaveAction.Publish, AccessLevel.NoAccess);
                     }
 
-                     
+
                     // change Start page sort order for children
                     if (repo.Get<StartPage>(startReference).CreateWritableClone() is StartPage startPage)
                     {

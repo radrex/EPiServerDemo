@@ -43,6 +43,7 @@
             viewModel.MenuPages = FilterForVisitor.Filter(loader.GetChildren<BasePage>(ContentReference.StartPage))
                                                   .Cast<BasePage>()
                                                   .Where(page => page.VisibleInMenu);
+            // TODO: loader.GetDescendants ?
 
             viewModel.Section = currentPage.ContentLink.GetSection();
             return viewModel;

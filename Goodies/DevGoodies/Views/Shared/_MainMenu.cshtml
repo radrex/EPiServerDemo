@@ -1,0 +1,29 @@
+﻿@using EPiServer.Core
+@using DevGoodies.Interfaces
+@using DevGoodies.Models.Pages
+@using DevGoodies.Business.ExtensionMethods
+
+@model IPageViewModel<BasePage>
+
+<div class="logo">
+  @Html.ContentLink(ContentReference.StartPage)
+</div>
+
+<ul>
+  @foreach (var item in Model.MenuPages)
+  {
+    // Whats the difference between these 2 ?
+    <li>@Html.ContentLink(item.ContentLink)</li>
+    <li>@Html.ContentLink(item.LinkURL)</li>
+
+    // TODO: Recursively traverse the menus
+
+  }
+</ul>
+
+@if (User.Identity.IsAuthenticated)
+{
+<a href="/en/logout">Log out @User.Identity.Name</a> }
+else
+{
+<a href="@FormsAuthentication.LoginUrl?ReturnUrl=@Model.CurrentPage.PageLink.ExternalURLFromReference()">Log in</a>}

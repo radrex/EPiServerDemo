@@ -18,8 +18,10 @@
             Global.UrlRewriteProvider.ConvertToExternal(pageURLBuilder, page.PageLink, UTF8Encoding.UTF8);
 
             string pageURL = pageURLBuilder.ToString();
-            UriBuilder uriBuilder = new UriBuilder(EPiServer.Web.SiteDefinition.Current.SiteUrl);
-            uriBuilder.Path = pageURL;
+            UriBuilder uriBuilder = new UriBuilder(EPiServer.Web.SiteDefinition.Current.SiteUrl)
+            {
+                Path = pageURL
+            };
             return uriBuilder.Uri.AbsoluteUri;
         }
     }
