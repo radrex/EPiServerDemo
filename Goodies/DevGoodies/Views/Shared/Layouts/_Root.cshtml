@@ -19,6 +19,9 @@
 <body>
   @Html.RenderEPiServerQuickNavigator() @* Render EPiServer menu for Editors *@
 
+  <h1>@Model.CurrentPage.OgTypes</h1>
+
+
   @if (User.Identity.IsAuthenticated)
   {
     <a href="/en/logout">Log out @User.Identity.Name</a>

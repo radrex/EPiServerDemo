@@ -8,6 +8,8 @@
 
     public static class SectionExtensionMethods
     {
+        //---------------- METHODS ----------------
+
         // Gets the top level page of the section this page is in. Used to build our submenu.
         public static IContent GetSection(this ContentReference contentLink)
         {

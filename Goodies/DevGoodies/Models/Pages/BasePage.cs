@@ -9,7 +9,6 @@
     using DevGoodies.Business.Constants;
     using DevGoodies.Business.SelectionFactories;
 
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     public abstract class BasePage : PageData

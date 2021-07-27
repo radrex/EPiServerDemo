@@ -8,6 +8,7 @@
 
     using System.ComponentModel.DataAnnotations;
 
+    [AvailableContentTypes(Include = new[] { typeof(BackEndPage), typeof(FrontEndPage) })]
     [ContentType(DisplayName = "Home", GUID = "49731d25-4e5e-42f9-84fa-c8e1fe423b9a", GroupName = Groups.Specialized, Order = 10,
                  Description = "A Home page for a website.")]
     public class StartPage : BasePage

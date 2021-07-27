@@ -1,0 +1,9 @@
+﻿@using DevGoodies.ViewModels
+@using EPiServer.Web.Mvc.Html
+
+@model PageViewModel<DevGoodies.Models.Pages.ResourcesPage>
+
+<h1>Resources Page</h1>
+
+@Html.PropertyFor(x => x.CurrentPage.Heading)
+@Html.PropertyFor(x => x.CurrentPage.MainBody)

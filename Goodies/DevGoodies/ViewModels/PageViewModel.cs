@@ -24,6 +24,8 @@
 
     public static class PageViewModel
     {
+        //---------------- METHODS ----------------
+
         // A convenient method for creating PageViewModel instances without having to specify the type, because generic methods can use type inference while constructors cannot.
         public static PageViewModel<T> Create<T>(T currentPage) where T : BasePage
         {

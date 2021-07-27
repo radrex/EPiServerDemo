@@ -220,6 +220,9 @@
     <Compile Include="Business\DependencyResolvers\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\ExtensionMethods\MiscExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
+    <Compile Include="Controllers\BackEndPageController.cs" />
+    <Compile Include="Controllers\FrontEndPageController.cs" />
+    <Compile Include="Controllers\ResourcesPageController.cs" />
     <Compile Include="Initialization\RegisterAdminInitializationModule.cs" />
     <Compile Include="Business\SelectionFactories\OGTypeSelectionFactory.cs" />
     <Compile Include="Business\Constants\Groups.cs" />
@@ -230,6 +233,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Initialization\RegisterDependencyResolverInitializationModule.cs" />
+    <Compile Include="Initialization\SeedPagesInitializationModule.cs" />
+    <Compile Include="Models\Media\AnyFile.cs" />
+    <Compile Include="Models\Media\AVIFile.cs" />
+    <Compile Include="Models\Media\ImageFile.cs" />
+    <Compile Include="Models\Media\PDFFile.cs" />
+    <Compile Include="Models\Media\SVGFile.cs" />
+    <Compile Include="Models\Pages\BackEndPage.cs" />
+    <Compile Include="Models\Pages\FrontEndPage.cs" />
+    <Compile Include="Models\Pages\ResourcesPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Pages\BasePage.cs" />
     <Compile Include="Interfaces\IPageViewModel.cs" />
@@ -241,7 +253,6 @@
     <Folder Include="ClientResources\" />
     <Folder Include="Data\" />
     <Folder Include="Models\Blocks\" />
-    <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Static\" />
   </ItemGroup>
@@ -260,6 +271,9 @@
     <Content Include="Views\Shared\Layouts\_Root.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="Views\BackEndPage\Index.cshtml" />
+    <Content Include="Views\FrontEndPage\Index.cshtml" />
+    <Content Include="Views\ResourcesPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
