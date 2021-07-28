@@ -1,0 +1,15 @@
+﻿@model DevGoodies.ViewModels.WelcomeBlockViewModel
+
+<div class="media">
+  <div style="clear:both;">
+    <div class="mediaImg">
+      @Html.PropertyFor(x => x.CurrentBlock.WelcomeImage)
+    </div>
+    <div class="mediaText">
+      <h2>@Html.PropertyFor(x => x.CurrentBlock.WelcomeHeading)</h2>
+      @*<h2 @Html.EditAttributes(x => x.CurrentBlock.WelcomeHeading)>@Model.CurrentBlock.WelcomeHeading</h2>*@
+      <p>@Html.PropertyFor(x => x.CurrentBlock.WelcomeText)</p>
+      <p>@Model.Description</p>
+    </div>
+  </div>
+</div>

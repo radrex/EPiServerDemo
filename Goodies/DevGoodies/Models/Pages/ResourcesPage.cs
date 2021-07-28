@@ -8,6 +8,7 @@
 
     using System.ComponentModel.DataAnnotations;
 
+    [AvailableContentTypes(Exclude = new[] { typeof(BasePage)})] // Restrict all page types for this page
     [ContentType(DisplayName = "ResourcesPage", GUID = "213acc32-4fb1-414b-8aee-bbe75f44d0a9", GroupName = Groups.Specialized, Order = 20,
                  Description = "A Resources page for the website.")]
     public class ResourcesPage : BasePage

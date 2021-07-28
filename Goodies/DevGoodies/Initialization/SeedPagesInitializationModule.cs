@@ -19,6 +19,7 @@
     [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
     public class SeedPagesInitializationModule : IInitializableModule
     {
+        //---------------- METHODS ----------------
         public void Initialize(InitializationEngine context)
         {
             // this returns empty if one of your sites does not have a * wildcard hostname

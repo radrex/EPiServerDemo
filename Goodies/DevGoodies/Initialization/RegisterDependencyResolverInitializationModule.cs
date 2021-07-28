@@ -12,6 +12,8 @@
     [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
     public class RegisterDependencyResolverInitializationModule : IConfigurableModule
     {
+        //---------------- METHODS ----------------
+
         // Here you can add statements to replace Episerver services like IContentLoader with your own implementations, where you can register your own custom services.
         public void ConfigureContainer(ServiceConfigurationContext context)
         {

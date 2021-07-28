@@ -222,7 +222,9 @@
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
     <Compile Include="Controllers\BackEndPageController.cs" />
     <Compile Include="Controllers\FrontEndPageController.cs" />
+    <Compile Include="Controllers\PreviewPageController.cs" />
     <Compile Include="Controllers\ResourcesPageController.cs" />
+    <Compile Include="Controllers\WelcomeBlockController.cs" />
     <Compile Include="Initialization\RegisterAdminInitializationModule.cs" />
     <Compile Include="Business\SelectionFactories\OGTypeSelectionFactory.cs" />
     <Compile Include="Business\Constants\Groups.cs" />
@@ -234,6 +236,7 @@
     </Compile>
     <Compile Include="Initialization\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Initialization\SeedPagesInitializationModule.cs" />
+    <Compile Include="Models\Blocks\WelcomeBlock.cs" />
     <Compile Include="Models\Media\AnyFile.cs" />
     <Compile Include="Models\Media\AVIFile.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
@@ -247,12 +250,13 @@
     <Compile Include="Interfaces\IPageViewModel.cs" />
     <Compile Include="ViewModels\PageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\PreviewPageViewModel.cs" />
+    <Compile Include="ViewModels\WelcomeBlockViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\Enums\" />
     <Folder Include="ClientResources\" />
     <Folder Include="Data\" />
-    <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Static\" />
   </ItemGroup>
@@ -275,6 +279,8 @@
     <Content Include="Views\FrontEndPage\Index.cshtml" />
     <Content Include="Views\ResourcesPage\Index.cshtml" />
     <Content Include="Views\Shared\_MainMenu.cshtml" />
+    <Content Include="Views\WelcomeBlock\Index.cshtml" />
+    <Content Include="Views\PreviewPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
