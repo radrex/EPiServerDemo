@@ -5,6 +5,7 @@
     using DevGoodies.Interfaces;
     using DevGoodies.Models.Pages;
 
+    using System;
     using System.Collections.Generic;
 
     public class PageViewModel<T> : IPageViewModel<T> where T : BasePage
@@ -12,13 +13,15 @@
         //-------------- PROPERTIES ---------------
         public T CurrentPage { get; set; }
         public StartPage StartPage { get; set; }
-        public IEnumerable<BasePage> MenuPages { get; set; }
+        public IEnumerable<BasePage> Children { get; set; }
+        public Dictionary<string, List<string>> PageURLs { get; set; }
         public IContent Section { get; set; }
 
         //------------- CONSTRUCTORS --------------
         public PageViewModel(T currentPage)
         {
             this.CurrentPage = currentPage;
+            this.PageURLs = new Dictionary<string, List<string>>();
         }
     }
 

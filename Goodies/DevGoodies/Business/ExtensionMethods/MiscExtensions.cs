@@ -10,7 +10,7 @@
     public static class MiscExtensions
     {
         //---------------- METHODS ----------------
-        public static string ExternalURLFromReference(this PageReference contentLink)
+        public static string ExternalURLFromReference(this ContentReference contentLink)
         {
             IContentLoader loader = ServiceLocator.Current.GetInstance<IContentLoader>();
             PageData page = loader.Get<PageData>(contentLink);
