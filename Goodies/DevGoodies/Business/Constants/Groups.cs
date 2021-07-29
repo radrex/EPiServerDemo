@@ -10,5 +10,7 @@
         public const string FrontEnd = "Front-End";
         public const string Tutorials = "Tutorials";
         public const string Conferences = "Conferences";
+        public const string Blocks = "Blocks";
+        public const string General = "General";
     }
 }

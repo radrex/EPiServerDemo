@@ -218,10 +218,13 @@
   <ItemGroup>
     <Compile Include="Business\Attributes\OGTypeSelectionAttribute.cs" />
     <Compile Include="Business\DependencyResolvers\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\ExtensionMethods\ContentRecommendationExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\MiscExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
     <Compile Include="Controllers\BackEndPageController.cs" />
     <Compile Include="Controllers\FrontEndPageController.cs" />
+    <Compile Include="Controllers\GeneralPageController.cs" />
+    <Compile Include="Controllers\GeneralPagePartialController.cs" />
     <Compile Include="Controllers\PreviewPageController.cs" />
     <Compile Include="Controllers\ResourcesPageController.cs" />
     <Compile Include="Controllers\WelcomeBlockController.cs" />
@@ -236,6 +239,7 @@
     </Compile>
     <Compile Include="Initialization\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Initialization\SeedPagesInitializationModule.cs" />
+    <Compile Include="Models\Blocks\AuthorBlock.cs" />
     <Compile Include="Models\Blocks\WelcomeBlock.cs" />
     <Compile Include="Models\Media\AnyFile.cs" />
     <Compile Include="Models\Media\AVIFile.cs" />
@@ -243,6 +247,7 @@
     <Compile Include="Models\Media\PDFFile.cs" />
     <Compile Include="Models\Media\SVGFile.cs" />
     <Compile Include="Models\Pages\BackEndPage.cs" />
+    <Compile Include="Models\Pages\GeneralPage.cs" />
     <Compile Include="Models\Pages\FrontEndPage.cs" />
     <Compile Include="Models\Pages\ResourcesPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
@@ -281,6 +286,9 @@
     <Content Include="Views\Shared\_MainMenu.cshtml" />
     <Content Include="Views\WelcomeBlock\Index.cshtml" />
     <Content Include="Views\PreviewPage\Index.cshtml" />
+    <Content Include="Views\Shared\AuthorBlock.cshtml" />
+    <Content Include="Views\GeneralPage\Index.cshtml" />
+    <Content Include="Views\GeneralPagePartial\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

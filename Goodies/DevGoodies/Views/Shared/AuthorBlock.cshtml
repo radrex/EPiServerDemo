@@ -1,0 +1,8 @@
+﻿@model DevGoodies.Models.Blocks.AuthorBlock
+
+<div>
+  @Model.FirstName @Model.LastName
+  @(Model.HireDate.HasValue ? "was hired on" + Model.HireDate.Value.ToString("dddd, d MMMM yyyy") : "")
+</div>
+
+<p>@Html.PropertyFor(x => x.MainContentArea)</p>

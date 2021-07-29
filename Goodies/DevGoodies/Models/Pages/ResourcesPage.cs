@@ -4,6 +4,7 @@
     using EPiServer.DataAbstraction;
     using EPiServer.DataAnnotations;
 
+    using DevGoodies.Models.Blocks;
     using DevGoodies.Business.Constants;
 
     using System.ComponentModel.DataAnnotations;
@@ -22,5 +23,9 @@
         [Display(Name = "Main body", GroupName = SystemTabNames.Content, Order = 20,
                  Description = "The main body uses the XHTML-editor you can insert for example text, images and tables.")]
         public virtual XhtmlString MainBody { get; set; }
+
+        [Display(Name = "Author block", GroupName = SystemTabNames.Content, Order = 30,
+                 Description = "Author block property.")]
+        public virtual AuthorBlock Author { get; set; }
     }
 }
