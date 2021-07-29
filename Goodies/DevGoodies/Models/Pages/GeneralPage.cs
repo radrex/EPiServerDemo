@@ -23,9 +23,9 @@
         public virtual XhtmlString MainBody { get; set; }
 
         [CultureSpecific]
-        [AllowedTypes(typeof(PageData))]
+        [AllowedTypes(typeof(PageData), typeof(ContentFolder), typeof(BlockData))]
         [Display(Name = "Main Content Area", GroupName = SystemTabNames.Content, Order = 30,
-         Description = "The Main content area of the page. Can contain pages.")]
+         Description = "The Main content area of the page. Can contain pages, folders and blocks.")]
         public virtual ContentArea MainContentArea { get; set; }
     }
 }

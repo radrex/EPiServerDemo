@@ -9,6 +9,9 @@
 
     public class GeneralPagePartialController : PartialContentController<GeneralPage>
     {
+        //-----------------------------------------------------------------------------------------------------//
+        //                                           ACTION METHODS                                            //
+        //-----------------------------------------------------------------------------------------------------//
         public override ActionResult Index(GeneralPage currentPage)
         {
             return PartialView(PageViewModel.Create(currentPage));
