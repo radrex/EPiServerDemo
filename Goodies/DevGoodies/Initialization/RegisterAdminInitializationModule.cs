@@ -10,7 +10,7 @@
     using System.Configuration;
 
     [InitializableModule]
-    [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
+    [ModuleDependency(typeof(EPiServer.Web.InitializationModule))] // For order of execution - typeof(MyModule) will be initialized before our module
     public class RegisterAdminInitializationModule : IInitializableModule
     {
         //--------------- CONSTANTS ---------------

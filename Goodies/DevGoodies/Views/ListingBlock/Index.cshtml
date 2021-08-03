@@ -1,0 +1,26 @@
+﻿@using EPiServer.Core
+
+@model DevGoodies.ViewModels.ListingBlockViewModel
+
+<p>@Html.PropertyFor(x => x.Heading)</p>
+@if (Model.Pages.Count() == 0)
+{
+  <div>The page selected has no children.</div>
+}
+
+@foreach (PageData page in Model.Pages)
+{
+  <div>
+    <h3>@Html.ContentLink(page.ContentLink)</h3>
+    @if (page.StartPublish.HasValue)
+    {
+      <p>Published on @page.StartPublish.Value.ToString("dddd, d MMMM yyyy")</p>
+    }
+
+    @if (page.Property["MainBody"] != null)
+    {
+      @Html.Raw(page.Property["MainBody"].Value)
+    }
+    <hr />
+  </div>
+}
