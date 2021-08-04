@@ -5,8 +5,10 @@
     using EPiServer.DataAnnotations;
 
     using DevGoodies.Models.Media;
+    using DevGoodies.Models.Blocks;
     using DevGoodies.Business.Constants;
 
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     [AvailableContentTypes(Include = new[] { typeof(BackEndPage), typeof(FrontEndPage), typeof(GeneralPage) })]
@@ -29,5 +31,23 @@
         [Display(Name = "Main Content Area", GroupName = SystemTabNames.Content, Order = 30,
                  Description = "The Main content area of the page. Can contain blocks, media assets, and pages.")]
         public virtual ContentArea MainContentArea { get; set; }
+
+        [CultureSpecific]
+        [AllowedTypes(typeof(EventBlock))]
+        [Display(Name = "Event list as content area", GroupName = Tabs.Events, Order = 10,
+                 Description = "Can contain only EventBlock.")]
+        public virtual ContentArea EventListContentArea { get; set; }
+
+        [CultureSpecific]
+        [AllowedTypes(typeof(EventBlock))]
+        [Display(Name = "Event list as a list of content references", GroupName = Tabs.Events, Order = 20,
+                 Description = "Can contain only EventBlock.")]
+        public virtual IList<ContentReference> EventListContentReferences { get; set; }
+
+        [CultureSpecific]
+        [AllowedTypes(typeof(ContentFolder))]
+        [Display(Name = "Event list as reference to assets folder", GroupName = Tabs.Events, Order = 30,
+                 Description = "Can contain only EventBlock.")]
+        public virtual ContentReference EventListAssetsFolderReference { get; set; }
     }
 }

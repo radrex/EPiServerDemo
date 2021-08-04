@@ -1,0 +1,11 @@
+﻿@model DevGoodies.ViewModels.EventBlockViewModel
+
+<div>
+  <h1>@Html.PropertyFor(x => x.CurrentBlock.Title)</h1>
+</div>
+
+<div>
+  <h2>@Html.PropertyFor(x => x.CurrentBlock.Where)</h2>
+  <p>@Html.PropertyFor(x => x.CurrentBlock.When)</p>
+  <p>@Html.PropertyFor(x => x.CurrentBlock.Description)</p>
+</div>

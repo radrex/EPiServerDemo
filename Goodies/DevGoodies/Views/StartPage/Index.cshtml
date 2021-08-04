@@ -8,9 +8,26 @@
 </h1>
 
 <div>
-  @Html.PropertyFor(x => x.CurrentPage.MainBody) @* Use for On-Page Editing *@
+  @Html.PropertyFor(x => x.CurrentPage.MainBody)
 </div>
 
 <div>
-  @Html.PropertyFor(x => x.CurrentPage.MainContentArea) @* Use for On-Page Editing *@
+  @Html.PropertyFor(x => x.CurrentPage.MainContentArea)
+</div>
+
+<h2>Event list as content area</h2>
+<div>
+  @Html.PropertyFor(x => x.CurrentPage.EventListContentArea)
+</div>
+<hr />
+
+<h2>Event list of content references</h2>
+<div>
+  @Html.PropertyFor(x => x.CurrentPage.EventListContentReferences)
+</div>
+<hr />
+
+<h2>Event list as reference to an assets folder</h2>
+<div>
+  @Html.PropertyFor(x => x.CurrentPage.EventListAssetsFolderReference)
 </div>

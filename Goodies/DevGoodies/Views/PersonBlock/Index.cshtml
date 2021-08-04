@@ -1,0 +1,8 @@
+﻿@model DevGoodies.ViewModels.PersonBlockViewModel
+
+<div>
+  <h2>@Html.PropertyFor(x => x.CurrentBlock.FirstName)</h2>
+  <h2>@Html.PropertyFor(x => x.CurrentBlock.LastName)</h2>
+  <p>@Html.PropertyFor(x => x.CurrentBlock.BirthDate)</p>
+  <p>@Html.PropertyFor(x => x.CurrentBlock.Summary)</p>
+</div>

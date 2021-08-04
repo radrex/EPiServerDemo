@@ -9,7 +9,7 @@
     using System;
     using System.ComponentModel.DataAnnotations;
 
-    [ContentType(DisplayName = "AuthorBlock", GUID = "fb106088-79a7-4988-9279-abf94c09a7c5", GroupName = Groups.Blocks, Order = 10,
+    [ContentType(DisplayName = "AuthorBlock", GUID = "fb106088-79a7-4988-9279-abf94c09a7c5", GroupName = Groups.Blocks, Order = 20,
                  Description = "Block for storing information about an Author of an item.")]
     public class AuthorBlock : BlockData
     {

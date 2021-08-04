@@ -223,10 +223,12 @@
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
     <Compile Include="Controllers\BackEndPageController.cs" />
     <Compile Include="Controllers\ContentFolderController.cs" />
+    <Compile Include="Controllers\EventBlockController.cs" />
     <Compile Include="Controllers\FrontEndPageController.cs" />
     <Compile Include="Controllers\GeneralPageController.cs" />
     <Compile Include="Controllers\GeneralPagePartialController.cs" />
     <Compile Include="Controllers\ListingBlockController.cs" />
+    <Compile Include="Controllers\PersonBlockController.cs" />
     <Compile Include="Controllers\PreviewPageController.cs" />
     <Compile Include="Controllers\ResourcesPageController.cs" />
     <Compile Include="Controllers\WelcomeBlockController.cs" />
@@ -242,7 +244,10 @@
     <Compile Include="Initialization\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Initialization\SeedPagesInitializationModule.cs" />
     <Compile Include="Models\Blocks\AuthorBlock.cs" />
+    <Compile Include="Models\Blocks\EventBlock.cs" />
     <Compile Include="Models\Blocks\ListingBlock.cs" />
+    <Compile Include="Models\Blocks\PersonalBlock.cs" />
+    <Compile Include="Models\Blocks\PersonBlock.cs" />
     <Compile Include="Models\Blocks\WelcomeBlock.cs" />
     <Compile Include="Models\Media\AnyFile.cs" />
     <Compile Include="Models\Media\AVIFile.cs" />
@@ -257,6 +262,7 @@
     <Compile Include="Models\Pages\BasePage.cs" />
     <Compile Include="Interfaces\IPageViewModel.cs" />
     <Compile Include="ViewModels\ContentFolderViewModel.cs" />
+    <Compile Include="ViewModels\EventBlockViewModel.cs" />
     <Compile Include="ViewModels\ListingBlockViewModel.cs" />
     <Compile Include="ViewModels\PageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,6 +302,9 @@
     <Content Include="Views\GeneralPagePartial\Index.cshtml" />
     <Content Include="Views\ContentFolder\Index.cshtml" />
     <Content Include="Views\ListingBlock\Index.cshtml" />
+    <Content Include="Views\EventBlock\Index.cshtml" />
+    <Compile Include="ViewModels\PersonBlockViewModel.cs" />
+    <Content Include="Views\PersonBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
