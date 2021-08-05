@@ -38,15 +38,19 @@
                  Description = "Can contain only EventBlock.")]
         public virtual ContentArea EventListContentArea { get; set; }
 
+        [Display(Name = "Event block as property", GroupName = Tabs.Events, Order = 40,
+         Description = "Can contain only EventBlock.")]
+        public virtual EventBlock EventBlockAsProperty { get; set; }
+
         [CultureSpecific]
         [AllowedTypes(typeof(EventBlock))]
-        [Display(Name = "Event list as a list of content references", GroupName = Tabs.Events, Order = 20,
+        [Display(Name = "Event list as a list of content references", GroupName = Tabs.Events, Order = 30,
                  Description = "Can contain only EventBlock.")]
         public virtual IList<ContentReference> EventListContentReferences { get; set; }
 
         [CultureSpecific]
-        [AllowedTypes(typeof(ContentFolder))]
-        [Display(Name = "Event list as reference to assets folder", GroupName = Tabs.Events, Order = 30,
+        [AllowedTypes(typeof(EventBlock), typeof(ContentFolder))]
+        [Display(Name = "Event list as reference to assets folder", GroupName = Tabs.Events, Order = 50,
                  Description = "Can contain only EventBlock.")]
         public virtual ContentReference EventListAssetsFolderReference { get; set; }
     }

@@ -1,6 +1,8 @@
 ﻿@using DevGoodies.ViewModels
 @using EPiServer.Web.Mvc.Html
 
+@using DevGoodies.Models.Blocks
+
 @model PageViewModel<DevGoodies.Models.Pages.StartPage>
 
 <h1 @Html.EditAttributes(x => x.CurrentPage.Heading)>
@@ -18,6 +20,12 @@
 <h2>Event list as content area</h2>
 <div>
   @Html.PropertyFor(x => x.CurrentPage.EventListContentArea)
+</div>
+<hr />
+
+<h2>Event list as block property</h2>
+<div>
+  @Html.PropertyFor(x => x.CurrentPage.EventBlockAsProperty)
 </div>
 <hr />
 

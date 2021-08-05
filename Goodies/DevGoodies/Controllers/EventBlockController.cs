@@ -2,10 +2,10 @@
 {
     using EPiServer.Web.Mvc;
 
+    using DevGoodies.ViewModels;
     using DevGoodies.Models.Blocks;
 
     using System.Web.Mvc;
-    using DevGoodies.ViewModels;
 
     public class EventBlockController : BlockController<EventBlock>
     {
